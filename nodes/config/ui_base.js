@@ -212,10 +212,10 @@ module.exports = function (RED) {
          * @param {Socket} socket - socket.io socket connecting to the server
          */
         function emitConfig (socket) {
-            node.log("node.ui: ");
-            node.log(node.ui);
-            console.log("node.ui: ");
-            console.log(node.ui);
+            console.log("node.ui.themes: ");
+            console.log(node.ui.themes);
+            console.log("node.ui.themes.colors: ");
+            console.log(node.ui.themes.colors);
             // pass the connected UI the UI config
             socket.emit('ui-config', node.id, {
                 dashboards: Object.fromEntries(node.ui.dashboards),
