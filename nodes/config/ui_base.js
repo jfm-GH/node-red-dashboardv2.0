@@ -219,8 +219,9 @@ module.exports = function (RED) {
                 pages: Object.fromEntries(node.ui.pages),
                 themes: Object.fromEntries(node.ui.themes),
                 groups: Object.fromEntries(node.ui.groups),
-                widgets: Object.fromEntries(node.ui.widgets)
+                widgets: Object.fromEntries(node.ui.widgets),  
             })
+            console.log("node.ui: ", node.ui);
         }
 
         // remove event handler socket listeners for a given socket connection

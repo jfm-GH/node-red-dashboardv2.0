@@ -22,8 +22,6 @@
                 // groups
                 this.colors.groupBg = '#ffffff'
                 this.colors.groupOutline = '#cccccc'
-                console.log("this.colors: ");
-                console.log(this.colors);
                 
             }
 
@@ -52,8 +50,11 @@
             Object.keys(this.colors).forEach((color) => {
                 // set the value of the input
                 this.colors[color] = $('#node-config-input-' + color).val()
+
+                // testing if the right color is being set
                 console.log("this.color[color]: ")
                 console.log(this.colors[color])
+                // test result: the right color is being set
             })
         },
         label: function () {
