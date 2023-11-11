@@ -221,6 +221,8 @@ module.exports = function (RED) {
                 groups: Object.fromEntries(node.ui.groups),
                 widgets: Object.fromEntries(node.ui.widgets),  
             })
+            node.log("node.ui: ");
+            node.log(node.ui);
             console.log("node.ui: ");
             console.log(node.ui);
         }
