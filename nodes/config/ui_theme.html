@@ -22,6 +22,9 @@
                 // groups
                 this.colors.groupBg = '#ffffff'
                 this.colors.groupOutline = '#cccccc'
+                console.log("this.colors: ");
+                console.log(this.colors);
+                
             }
 
             // loop over keys in this.colors
@@ -49,6 +52,8 @@
             Object.keys(this.colors).forEach((color) => {
                 // set the value of the input
                 this.colors[color] = $('#node-config-input-' + color).val()
+                console.log("this.color[color]: ")
+                console.log(this.colors[color])
             })
         },
         label: function () {
@@ -64,7 +69,7 @@
     </div>
     <div class="form-row">
         <label><i class="fa fa-bookmark"></i> Surface</label>
-        <label class="color-picker-wrapper" for="node-config-input-primary" style="width: 100px; height: 32px; border-radius: 6px; border: 1px solid #ccc">
+        <label class="color-picker-wrapper" for="node-config-input-surface" style="width: 100px; height: 32px; border-radius: 6px; border: 1px solid #ccc">
             <input type="color" id="node-config-input-surface" style="opacity: 0; width: 100%;"/>
         </label>
     </div>
@@ -79,7 +84,7 @@
     </div>
     <div class="form-row">
         <label><i class="fa fa-bookmark"></i> Background</label>
-        <label class="color-picker-wrapper" for="node-config-input-background" style="width: 100px; height: 32px; border-radius: 6px; border: 1px solid #ccc">
+        <label class="color-picker-wrapper" for="node-config-input-bgPage" style="width: 100px; height: 32px; border-radius: 6px; border: 1px solid #ccc">
             <input type="color" id="node-config-input-bgPage" style="opacity: 0; width: 100%;"/>
         </label>
     </div>
@@ -88,13 +93,13 @@
     </div>
     <div class="form-row">
         <label><i class="fa fa-bookmark"></i> Background</label>
-        <label class="color-picker-wrapper" for="node-config-input-background" style="width: 100px; height: 32px; border-radius: 6px; border: 1px solid #ccc">
+        <label class="color-picker-wrapper" for="node-config-input-groupBg" style="width: 100px; height: 32px; border-radius: 6px; border: 1px solid #ccc">
             <input type="color" id="node-config-input-groupBg" style="opacity: 0; width: 100%;"/>
         </label>
     </div>
     <div class="form-row">
         <label><i class="fa fa-bookmark"></i> Outline</label>
-        <label class="color-picker-wrapper" for="node-config-input-background" style="width: 100px; height: 32px; border-radius: 6px; border: 1px solid #ccc">
+        <label class="color-picker-wrapper" for="node-config-input-groupOutline" style="width: 100px; height: 32px; border-radius: 6px; border: 1px solid #ccc">
             <input type="color" id="node-config-input-groupOutline" style="opacity: 0; width: 100%;"/>
         </label>
     </div>
