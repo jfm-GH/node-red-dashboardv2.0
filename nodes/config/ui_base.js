@@ -212,6 +212,10 @@ module.exports = function (RED) {
          * @param {Socket} socket - socket.io socket connecting to the server
          */
         function emitConfig (socket) {
+            node.log("node.ui: ");
+            node.log(node.ui);
+            console.log("node.ui: ");
+            console.log(node.ui);
             // pass the connected UI the UI config
             socket.emit('ui-config', node.id, {
                 dashboards: Object.fromEntries(node.ui.dashboards),
@@ -221,10 +225,6 @@ module.exports = function (RED) {
                 groups: Object.fromEntries(node.ui.groups),
                 widgets: Object.fromEntries(node.ui.widgets),  
             })
-            node.log("node.ui: ");
-            node.log(node.ui);
-            console.log("node.ui: ");
-            console.log(node.ui);
         }
 
         // remove event handler socket listeners for a given socket connection
