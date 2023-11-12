@@ -212,10 +212,12 @@ module.exports = function (RED) {
          * @param {Socket} socket - socket.io socket connecting to the server
          */
         function emitConfig (socket) {
+            // testing what is sent to the UI
             console.log("node.ui.themes: ");
             console.log(node.ui.themes);
-            console.log("node.ui.themes.colors: ");
-            console.log(node.ui.themes.colors);
+            // test result: node.ui.themes is sending the old color data
+
+
             // pass the connected UI the UI config
             socket.emit('ui-config', node.id, {
                 dashboards: Object.fromEntries(node.ui.dashboards),
@@ -514,6 +516,11 @@ module.exports = function (RED) {
             if (widget.props.height === '0') {
                 widget.props.height = null
             }
+
+            // for testing:
+            console.log('In node.register -> widget.widgetConfig: ');
+            console.log(widget.widgetConfig);
+            // returns: 
 
             // loop over props and check if we have any function definitions (e.g. onMounted, onInput)
             // and stringify them for transport over SocketIO
